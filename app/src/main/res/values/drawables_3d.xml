@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icon_sdf_list">
+        <item>@drawable/icon_healing_sdf_fg</item>
+        <item>@drawable/icon_healing_sdf_bg</item>
+    </array>
+    <array name="icon_3d_list">
+        <item>@drawable/icon_healing_fg</item>
+        <item>@drawable/icon_healing_bg</item>
+    </array>
+</resources>

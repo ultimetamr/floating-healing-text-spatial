@@ -1,0 +1,107 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "0aa2d8963164476a2ee4f6fdc7d52724",
+    "entities": [
+      {
+        "tableName": "healing_texts",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `content` TEXT NOT NULL, `font` TEXT NOT NULL, `color` TEXT NOT NULL, `sizeScale` REAL NOT NULL, `opacity` REAL NOT NULL, `anchorUuid` TEXT, `offsetX` REAL NOT NULL, `offsetY` REAL NOT NULL, `offsetZ` REAL NOT NULL, `initialRoll` REAL NOT NULL, `deleteState` TEXT NOT NULL, `deleteError` TEXT, `updatedAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "content",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "font",
+            "columnName": "font",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "color",
+            "columnName": "color",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sizeScale",
+            "columnName": "sizeScale",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "opacity",
+            "columnName": "opacity",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "anchorUuid",
+            "columnName": "anchorUuid",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "offsetX",
+            "columnName": "offsetX",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "offsetY",
+            "columnName": "offsetY",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "offsetZ",
+            "columnName": "offsetZ",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "initialRoll",
+            "columnName": "initialRoll",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deleteState",
+            "columnName": "deleteState",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deleteError",
+            "columnName": "deleteError",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0aa2d8963164476a2ee4f6fdc7d52724')"
+    ]
+  }
+}
